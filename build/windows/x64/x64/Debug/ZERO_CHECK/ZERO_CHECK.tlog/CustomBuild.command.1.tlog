@@ -1,0 +1,10 @@
+^C:\FULLSTACKBACKUP\BUILD\WINDOWS\X64\CMAKEFILES\D107A7A56C743ADC08A5FEB03F62B359\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/fullstackbackup/windows -BC:/fullstackbackup/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/fullstackbackup/build/windows/x64/fullstackbackup.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
